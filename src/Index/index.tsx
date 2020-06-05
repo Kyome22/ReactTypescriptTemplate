@@ -1,7 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
 ReactDOM.render(
-  <h1>Hello React with TypeScript!!!</h1>,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById("app")
 );
