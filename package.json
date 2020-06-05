@@ -23,11 +23,15 @@
     "write-file-webpack-plugin": "^4.5.1"
   },
   "dependencies": {
+    "@types/react-router-dom": "^5.1.5",
     "i18next": "^19.4.5",
+    "query-string": "^6.12.1",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.13.1",
-    "react-i18next": "^11.5.0"
+    "react-i18next": "^11.5.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   },
   "homepage": "./"
 }

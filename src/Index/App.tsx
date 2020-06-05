@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
+import { ParsedQuery } from "query-string";
 import { Header } from "./Header";
 import { Profile } from "./Profile/Profile";
 import { Works } from "./Works/Works";
@@ -20,9 +21,15 @@ i18n.use(initReactI18next).init({
   returnEmptyString: false,
 });
 
-const App: React.FC = () => {
+const App: React.FC<{ qs: ParsedQuery }> = (props) => {
+  const defaultLang = (qs: ParsedQuery) => {
+    if ("lang" in qs && qs.lang === "en") {
+      return "en";
+    }
+    return "ja";
+  };
   const { i18n } = useTranslation();
-  const [lang, setLang] = useState("ja");
+  const [lang, setLang] = useState(defaultLang(props.qs));
 
   useEffect(() => {
     i18n.changeLanguage(lang);

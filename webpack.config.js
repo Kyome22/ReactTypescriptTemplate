@@ -36,6 +36,9 @@ module.exports = {
         {
           from: path.resolve(__dirname, "static", "images"),
           to: path.resolve(__dirname, "dist", "images"),
+          globOptions: {
+            ignore: ["**/.DS_Store"],
+          },
         },
       ],
     }),
