@@ -15,6 +15,7 @@ export function Links() {
     <div className="links" id="linksSection">
       <h2 className="title">{t("links")}</h2>
       <div className="enums">{enums}</div>
+      <p>©︎ Takuto Nakamura</p>
     </div>
   );
 }

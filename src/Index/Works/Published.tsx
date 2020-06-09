@@ -29,14 +29,16 @@ export function Published(props: Props) {
   );
 
   const trs = (rows: PublishedEnumValue[][]) => {
-    return rows.map((enumValues, i) => <tr key={i}>{tds(enumValues)}</tr>);
+    return rows.map((enumValues, i) => (
+      <tr key={`tr-${i}`}>{tds(enumValues)}</tr>
+    ));
   };
 
   const tds = (row: PublishedEnumValue[]) => {
     return row.map((enumValue, i) => {
       const isEmptyDesc = enumValue.description === "";
       return (
-        <td key={i}>
+        <td key={`td-${i}`}>
           <a href={enumValue.url}>
             <img
               className={isEmptyDesc ? "minecraft" : "app"}

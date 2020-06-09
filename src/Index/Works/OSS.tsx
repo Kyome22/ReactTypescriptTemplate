@@ -13,7 +13,7 @@ export function OSS() {
   const { t } = useTranslation();
 
   const enums = (oss as LinkEnumValue[]).map(({ title, url }, i) => (
-    <OSSEnum key={i} title={title} url={url} content={t(title)} />
+    <OSSEnum key={`oss-${i}`} title={title} url={url} content={t(title)} />
   ));
 
   return (
