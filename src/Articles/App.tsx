@@ -1,6 +1,7 @@
 import React from "react";
 import { ParsedQuery } from "query-string";
 import { Header } from "./Header";
+import { Markdown } from "./Markdown";
 import { ArticlesList, ArticleData } from "./ArticlesList";
 import { Footer } from "./Footer";
 import articles from "./articles.json";
@@ -10,6 +11,7 @@ const App: React.FC<{ qs: ParsedQuery }> = (props) => {
   const list = articles as ArticleData[];
   const total = Math.floor(list.length / 20);
   const id = "id" in props.qs ? (props.qs.id as string) : "";
+  const isUnspecified = id === "";
   const title = () => {
     const index = list.findIndex((e) => e.id === id);
     return index < 0 ? "技術記事とポエム一覧" : list[index].title;
@@ -24,7 +26,15 @@ const App: React.FC<{ qs: ParsedQuery }> = (props) => {
   return (
     <div className="App">
       <Header title={title()} />
-      <ArticlesList page={page()} list={list} total={total} />
+      <div className="main">
+        {!isUnspecified && <Markdown id={id} />}
+        <ArticlesList
+          page={page()}
+          list={list}
+          total={total}
+          isUnspecified={isUnspecified}
+        />
+      </div>
       <Footer />
     </div>
   );
