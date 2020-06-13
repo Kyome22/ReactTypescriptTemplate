@@ -1,5 +1,5 @@
 .header {
-  width: 100%;
+  margin: 0;
   padding: 15px;
   text-align: left;
   color: #27292a;
@@ -16,6 +16,10 @@
 .header img {
   width: 50px;
   height: 50px;
+}
+
+.header img:hover {
+  cursor: pointer;
 }
 
 .header h2 {

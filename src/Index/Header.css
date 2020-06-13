@@ -35,7 +35,8 @@ h3 {
   margin-right: auto;
 }
 
-.header h3.language:hover {
+.header h3.language:hover,
+h3.articles:hover {
   cursor: pointer;
   color: #666666;
 }

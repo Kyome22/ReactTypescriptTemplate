@@ -40,6 +40,13 @@ module.exports = {
             ignore: ["**/.DS_Store"],
           },
         },
+        {
+          from: path.resolve(__dirname, "static", "articles"),
+          to: path.resolve(__dirname, "dist", "articles"),
+          globOptions: {
+            ignore: ["**/.DS_Store"],
+          },
+        },
       ],
     }),
     new WriteFilePlugin(),

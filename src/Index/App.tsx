@@ -35,9 +35,14 @@ const App: React.FC<{ qs: ParsedQuery }> = (props) => {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
 
+  const onLangChange = () => {
+    window.scrollTo(0, 0);
+    setLang(lang === "en" ? "ja" : "en");
+  };
+
   return (
     <div className="App">
-      <Header onLangChange={() => setLang(lang === "en" ? "ja" : "en")} />
+      <Header onLangChange={onLangChange} />
       <div className="dummyHeader" />
       <Profile />
       <Works lang={lang} />

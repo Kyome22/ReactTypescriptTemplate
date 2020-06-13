@@ -30,7 +30,14 @@ export function Header(props: Props) {
       <AnchorLink href="#worksSection" offset="80">
         <h3>{t("works")}</h3>
       </AnchorLink>
-      <h3>{t("articles")}</h3>
+      <h3
+        className="articles"
+        onClick={() => {
+          window.location.href = "./articles.html";
+        }}
+      >
+        {t("articles")}
+      </h3>
       <AnchorLink href="#linksSection" offset="80">
         <h3 className="last">{t("links")}</h3>
       </AnchorLink>

@@ -9,7 +9,8 @@ import "./App.css";
 
 const App: React.FC<{ qs: ParsedQuery }> = (props) => {
   const list = articles as ArticleData[];
-  const total = Math.floor(list.length / 20);
+  const showLimit = 15;
+  const total = Math.floor(list.length / showLimit);
   const id = "id" in props.qs ? (props.qs.id as string) : "";
   const isUnspecified = id === "";
   const title = () => {
@@ -29,6 +30,7 @@ const App: React.FC<{ qs: ParsedQuery }> = (props) => {
       <div className="main">
         {!isUnspecified && <Markdown id={id} />}
         <ArticlesList
+          showLimit={showLimit}
           page={page()}
           list={list}
           total={total}

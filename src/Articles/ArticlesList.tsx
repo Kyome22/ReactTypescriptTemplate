@@ -7,6 +7,7 @@ export type ArticleData = {
 };
 
 type Props = {
+  showLimit: number;
   page: number;
   list: ArticleData[];
   total: number;
@@ -14,12 +15,15 @@ type Props = {
 };
 
 export function ArticlesList(props: Props) {
-  const { page, list, total, isUnspecified } = props;
+  const { showLimit, page, list, total, isUnspecified } = props;
   const [currentPage, setPage] = useState(page);
 
   const items = list
     .filter((value, index) => {
-      return (currentPage - 1) * 20 <= index && index < currentPage * 20;
+      return (
+        (currentPage - 1) * showLimit <= index &&
+        index < currentPage * showLimit
+      );
     })
     .map(({ id, title }, i) => (
       <li key={`article-${i}`}>
@@ -29,16 +33,22 @@ export function ArticlesList(props: Props) {
 
   return (
     <div className={"ArticlesList" + (isUnspecified ? " unspecified" : "")}>
-      <ul>{items}</ul>
-      <button onClick={() => setPage(Math.max(currentPage - 1, 1))}>
+      <button
+        className={currentPage === 1 ? "unvisible" : "normal"}
+        onClick={() => setPage(Math.max(currentPage - 1, 1))}
+      >
         {"◀︎"}
       </button>
       <span>
         {currentPage}/{total}
       </span>
-      <button onClick={() => setPage(Math.min(currentPage + 1, total))}>
+      <button
+        className={currentPage === total ? "unvisible" : "normal"}
+        onClick={() => setPage(Math.min(currentPage + 1, total))}
+      >
         {"▶︎"}
       </button>
+      <ul>{items}</ul>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export function Header(props: Props) {
           src={"images/kyome_terrier.png"}
           alt="dog icon"
           onClick={() => {
-            console.log("back to top");
+            window.location.href = "./index.html";
           }}
         />
       </div>
