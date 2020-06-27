@@ -24,14 +24,15 @@
 
 .top h2.catchcopy {
   font-weight: bold;
-  /* font-size: 30px; */
 }
 
-/* .top h3.short-description {
-  font-size: 22px;
-} */
-
 .top img.download-icon {
+  margin-top: 20px;
   width: 250px;
   height: auto;
+}
+
+.top img.download-icon:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }

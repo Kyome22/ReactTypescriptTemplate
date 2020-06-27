@@ -1,6 +1,7 @@
 {
   "name": "runcat_page",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
     "build": "webpack"
