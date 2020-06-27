@@ -4,6 +4,7 @@
   min-width: 650px;
   height: 60px;
   text-align: left;
+  font-family: "Exo 2", sans-serif;
   color: #ffffff;
   background-color: #525252;
   display: flex;
@@ -12,6 +13,8 @@
 .header .title {
   margin: 0px auto 0px 25px;
   line-height: 60px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .header .language {

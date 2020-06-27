@@ -12,7 +12,7 @@ export function Header(props: Props) {
 
   return (
     <div className="header">
-      <h2 className="title">Title</h2>
+      <h2 className="title">{t("app_name")}</h2>
       <h3 className="language" onClick={onLangChange}>
         {t("language")}
       </h3>
