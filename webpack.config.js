@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const WriteFilePlugin = require("write-file-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
     index: path.resolve(__dirname, "src", "Index", "index.tsx"),
     articles: path.resolve(__dirname, "src", "Articles", "articles.tsx"),
@@ -19,6 +19,18 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
     port: 3000,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -51,16 +63,4 @@ module.exports = {
     }),
     new WriteFilePlugin(),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
-  },
 };
