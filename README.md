@@ -1,4 +1,5 @@
-# runcat_page
+# ReactTypescriptTemplate
 
-- RunCatの静的プロダクトページ
+- 静的プロダクトページの雛形
 - React, TypeScriptを使って作成
+- 国際化対応済み 
