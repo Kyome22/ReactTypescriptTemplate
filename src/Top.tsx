@@ -16,6 +16,10 @@ export function Top() {
       <img
         className="download-icon"
         src="images/en/download_on_the_App_Store.svg"
+        alt=""
+        onClick={() => {
+          window.location.href = t("download_url");
+        }}
       />
     </div>
   );
