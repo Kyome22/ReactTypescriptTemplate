@@ -4,9 +4,13 @@
   "catchcopy": "キャッチコピー",
   "short-description": "短い説明文",
   "download_url": "https://apps.apple.com/jp/app/",
+  "what_is_this": "どんなもの？",
+  "explain1": "サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル。",
   "privacy_policy": "プライバシーポリシー",
   "detail": "詳しく見る",
   "privacy_policy_url": "https://kyome.io/privacy_policy/index.html?lang=ja&id=",
   "support": "サポート",
+  "mail_subject": "アプリ 不具合の報告",
+  "mail_body": "# 環境\n- アプリのバージョン: [記入してください]\n- macOSのバージョン: [記入してください]\n\n# 試したこと\n- アプリの再起動: [はい/いいえ]\n\n# 不具合の簡単な説明\n\n\n# 不具合の再現手順（不具合が発生した際に行なっていた操作）\n\n\n# 本来期待される挙動\n\n\n",
   "copyright": "©︎ 2020 Takuto Nakamura"
 }

@@ -1,5 +1,25 @@
 .content {
   margin: 0;
-  padding: 20px 0px;
+  padding: 60px 0 0;
   background-color: #e7ebed;
+  text-align: center;
+}
+
+.content div.section {
+  margin-top: -60px;
+  padding: 60px 0 30px;
+}
+
+.content p.title {
+  margin: 0;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.content p.explain {
+  margin: 0;
+  padding: 20px 20px 30px;
+  font-size: 22px;
+  white-space: pre-line;
 }

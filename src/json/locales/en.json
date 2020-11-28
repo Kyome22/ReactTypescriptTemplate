@@ -4,9 +4,13 @@
   "catchcopy": "Catchcopy",
   "short_description": "Short Description",
   "download_url": "https://apps.apple.com/us/app/",
+  "what_is_this": "What is this?",
+  "explain1": "Sample Sample Sample Sample Sample Sample Sample Sample.",
   "privacy_policy": "Privacy Policy",
   "detail": "In more detail",
   "privacy_policy_url": "https://kyome.io/privacy_policy/index.html?lang=en&id=",
   "support": "Support",
+  "mail_subject": "App Issue Report",
+  "mail_body": "# Environment\n- Version of App: [please write]\n- Version of macOS: [please write]\n\n# What You Tried\n- Relaunched the app: [Yes/No]\n\n# Short Description\n\n\n# Steps to Reproduce the Issue\n\n\n# Expected Result\n\n\n",
   "copyright": "©︎ 2020 Takuto Nakamura"
 }

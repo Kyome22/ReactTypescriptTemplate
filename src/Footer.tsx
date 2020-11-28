@@ -5,6 +5,13 @@ import "./Footer.css";
 export function Footer() {
   const { t } = useTranslation();
 
+  const mail = (() => {
+    let str = "mailto:kyomesuke@icloud.com";
+    str += `?subject=${t("mail_subject")}`;
+    str += `&body=${t("mail_body")}`;
+    return encodeURI(str);
+  })();
+
   return (
     <div className="footer">
       <div className="privacy-policy">
@@ -20,21 +27,9 @@ export function Footer() {
       </div>
       <div className="support">
         <p className="contents-title">{t("support")}</p>
-        <a
-          className="twitter-link"
-          href="https://twitter.com/Kyomesuke"
-          target="_blank"
-        >
-          <img className="link-image" src="images/kyome_twitter.png" />
-          <span>@Kyomesuke</span>
-        </a>
-        <a
-          className="facebook-link"
-          href="https://www.facebook.com/takuto.nakamura.kyome"
-          target="_blank"
-        >
-          <img className="link-image" src="images/kyome_facebook.png" />
-          <span>Takuto Nakamura</span>
+        <a className="mail-link" href={mail}>
+          <img className="link-image" src="images/mail.png" />
+          <span>kyomesuke[at]icloud.com</span>
         </a>
       </div>
       <p className="copyright">{t("copyright")}</p>
