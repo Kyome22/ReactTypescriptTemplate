@@ -2,7 +2,7 @@
   "language": "English",
   "app_name": "アプリ名",
   "catchcopy": "キャッチコピー",
-  "short-description": "短い説明文",
+  "short_description": "短い説明文",
   "download_url": "https://apps.apple.com/jp/app/",
   "what_is_this": "どんなもの？",
   "explain1": "サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル。",
