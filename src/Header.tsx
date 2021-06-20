@@ -1,6 +1,6 @@
 import React from "react";
-import "./Header.css";
 import { useTranslation } from "react-i18next";
+import "./Header.css";
 
 type Props = {
   onLangChange: () => void;
@@ -18,4 +18,8 @@ export function Header(props: Props) {
       </h3>
     </div>
   );
+}
+
+export function DummyHeader() {
+  return <div className="dummy-header"></div>;
 }

@@ -1,4 +1,5 @@
 const path = require("path");
+const __desktop = `${process.env.HOME}/Desktop`;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
@@ -8,14 +9,14 @@ module.exports = {
     index: path.resolve(__dirname, "src", "index.tsx"),
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__desktop, "dist"),
     filename: "js/[name].bundle.js",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
+    contentBase: path.resolve(__desktop, "dist"),
     port: 3000,
   },
   module: {
@@ -40,14 +41,14 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "static", "images"),
-          to: path.resolve(__dirname, "dist", "images"),
+          to: path.resolve(__desktop, "dist", "images"),
           globOptions: {
             ignore: ["**/.DS_Store"],
           },
         },
         {
           from: path.resolve(__dirname, "static", "favicon.ico"),
-          to: path.resolve(__dirname, "dist", "favicon.ico"),
+          to: path.resolve(__desktop, "dist", "favicon.ico"),
         },
       ],
     }),
