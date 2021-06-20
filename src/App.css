@@ -9,13 +9,6 @@ p.title {
   font-weight: bold;
 }
 
-p.sub-title {
-  margin: 0;
-  padding: 20px;
-  font-size: 30px;
-  font-weight: bolder;
-}
-
 p.explain {
   margin: 0;
   padding: 20px 20px 30px;
@@ -29,12 +22,6 @@ p.limited-explain {
   font-size: 22px;
   text-align: left;
   white-space: pre-line;
-}
-
-p.limitation {
-  margin: 0 auto;
-  max-width: 800px;
-  text-align: left;
 }
 
 a.anchor {
