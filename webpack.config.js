@@ -16,7 +16,9 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   devServer: {
-    contentBase: path.resolve(__desktop, "dist"),
+    static: {
+      directory: path.resolve(__desktop, "dist"),
+    },
     port: 3000,
   },
   module: {
