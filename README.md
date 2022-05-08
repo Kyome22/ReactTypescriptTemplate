@@ -7,8 +7,7 @@
 ## 環境
 
 - Node.js
-  - [nodenv を使って Mac に Node.js の環境を構築する](https://qiita.com/1000ch/items/41ea7caffe8c42c5211c)
-  - [nodebrewからnodenvに乗り換えた](https://qiita.com/mame_daifuku/items/1dbdfbd4897b34df0d9f)
+  - [Nodeとnpmをセットアップしたりバージョンアップしたり](https://zenn.dev/kyome/articles/93097dd75dcecb)
 - npm
   - Node.jsをインストールしたら一緒にインストールされるらしい
 - yarn
