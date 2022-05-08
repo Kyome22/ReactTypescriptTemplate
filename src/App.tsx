@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
 import { ParsedQuery, parse } from "query-string";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Header, DummyHeader } from "./Header";
@@ -23,7 +22,7 @@ i18n.use(initReactI18next).init({
 });
 
 export default function App() {
-  const location = useLocation();
+  const location = window.location;
   const defaultLang = ((qs: ParsedQuery) => {
     if ("lang" in qs && qs.lang === "en") {
       return "en";
