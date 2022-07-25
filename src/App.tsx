@@ -42,7 +42,7 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <HelmetProvider>
         <Helmet title={t("app_name")} />
       </HelmetProvider>
