@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
-import { ParsedQuery, parse } from "query-string";
+import queryString from "query-string";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Header, DummyHeader } from "./Header";
 import Content from "./Content";
@@ -22,13 +22,12 @@ i18n.use(initReactI18next).init({
 });
 
 export default function App() {
-  const location = window.location;
-  const defaultLang = ((qs: ParsedQuery) => {
+  const defaultLang = ((qs: queryString.ParsedQuery) => {
     if ("lang" in qs && qs.lang === "en") {
       return "en";
     }
     return "ja";
-  })(parse(location.search));
+  })(queryString.parse(window.location.search));
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(defaultLang);
 
@@ -44,7 +43,7 @@ export default function App() {
   return (
     <div className="app">
       <HelmetProvider>
-        <Helmet title={t("app_name")} />
+        <Helmet htmlAttributes={{ lang: lang }} title={t("app_name")} />
       </HelmetProvider>
       <Header onLangChange={onLangChange} />
       <DummyHeader />
