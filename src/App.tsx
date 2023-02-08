@@ -48,7 +48,7 @@ export default function App() {
       <Header onLangChange={onLangChange} />
       <DummyHeader />
       <Content />
-      <Footer />
+      <Footer appName={t("app_name")} />
     </div>
   );
 }

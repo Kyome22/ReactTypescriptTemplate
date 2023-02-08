@@ -2,13 +2,17 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "./Footer.css";
 
-export default function Footer() {
+type Props = {
+  appName: string;
+};
+
+export default function Footer(props: Props) {
   const { t } = useTranslation();
 
   const mail = (() => {
     let str = "mailto:kyomesuke@icloud.com";
-    str += `?subject=${t("mail_subject")}`;
-    str += `&body=${t("mail_body")}`;
+    str += `?subject=${t("mail_subject", { appName: props.appName })}`;
+    str += `&body=${t("mail_body", { appName: props.appName })}`;
     return encodeURI(str);
   })();
 
