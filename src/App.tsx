@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 import queryString from "query-string";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Header, DummyHeader } from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
@@ -29,22 +28,22 @@ export default function App() {
     return "ja";
   })(queryString.parse(window.location.search));
   const { t, i18n } = useTranslation();
-  const [lang, setLang] = useState(defaultLang);
+  const [lang] = useState(defaultLang);
 
   useEffect(() => {
     i18n.changeLanguage(lang);
+    document.documentElement.setAttribute("lang", lang);
   }, [lang, i18n]);
 
   const onLangChange = () => {
     window.scrollTo(0, 0);
-    setLang(lang === "en" ? "ja" : "en");
+    const newLang = lang === "en" ? "ja" : "en";
+    window.location.replace(`?lang=${newLang}`);
   };
 
   return (
     <div className="app">
-      <HelmetProvider>
-        <Helmet htmlAttributes={{ lang: lang }} title={t("app_name")} />
-      </HelmetProvider>
+      <title>{t("app_name")}</title>
       <Header onLangChange={onLangChange} />
       <DummyHeader />
       <Content />

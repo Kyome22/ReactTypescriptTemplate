@@ -12,5 +12,5 @@
   "support": "Support",
   "mail_subject": "{{appName}} Issue Report",
   "mail_body": "# Environment\n- Version of {{appName}}: [please write]\n- Version of macOS: [please write]\n\n# What You Tried\n- Relaunched the app: [Yes/No]\n\n# Short Description\n\n\n# Steps to Reproduce the Issue\n\n\n# Expected Result\n\n\n",
-  "copyright": "©︎ 2023 Takuto Nakamura"
+  "copyright": "©︎ 2025 Takuto Nakamura"
 }
