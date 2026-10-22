@@ -6,9 +6,9 @@
 
 ## 環境
 
-- Node.js (>=24.13.1)
+- Node.js (24.22.1)
   - [Node と npm をセットアップしたりバージョンアップしたり](https://zenn.dev/kyome/articles/93097dd75dcecb)
-- npm (>11.10.0)
+- npm (12.2.1)
   - Node.js をインストールしたら一緒にインストールされるらしい
 
 ## 動作確認・ビルド
